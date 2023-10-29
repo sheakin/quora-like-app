@@ -1,0 +1,15 @@
+{% extends "users/base_form.html" %}
+{% load static %}
+{% block edit_form %}
+{% block img %}
+<div style="font-size: 50px;color: rgb(165, 29, 42)">Quora</div>
+{% endblock img %}
+{% block form %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    {% block btn %}{% endblock btn %}
+</form>
+{% endblock form %}
+{% block msg %}{% endblock msg %}
+{% endblock edit_form %}
